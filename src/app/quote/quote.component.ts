@@ -15,8 +15,6 @@ export class QuoteComponent implements OnInit {
      new Quote(5, 'Start your day with happiness and gratitude', 0, 0)
    ]
 
-  
-
   constructor() { }
 
   ngOnInit(): void {

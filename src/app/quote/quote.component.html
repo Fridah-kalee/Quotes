@@ -4,7 +4,9 @@
     <div class="row mt-md-5 pt-4">
         <div class="col-md-8">
             <h2>My Quotes</h2>
-        
+        <ul *ngFor="let quote of quotes">
+            <li>{{quote.quote}}<span class="text-primary">Upvotes: {{quote.upvotes}}</span><span class="text-danger">Downvotes: {{quote.downvotes}}</span></li>
+        </ul>
             
         </div>
         <div class="col-md-4">
