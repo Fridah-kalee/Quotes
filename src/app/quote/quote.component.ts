@@ -7,6 +7,14 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
 
+   quotes: Quote[]=[
+     new Quote(1, 'Believe you can and you are halfway there', 0, 0),
+     new Quote(2, 'You were born to be real ,not to be perfect', 0, 0),
+     new Quote(3, 'Just do it', 0, 0),
+     new Quote(4, 'Be the light', 0, 0),
+     new Quote(5, 'Start your day with happiness and gratitude', 0, 0)
+   ]
+
   
 
   constructor() { }
