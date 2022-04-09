@@ -14,7 +14,14 @@ export class QuoteComponent implements OnInit {
      new Quote(4, 'Be the light', 0, 0),
      new Quote(5, 'Start your day with happiness and gratitude', 0, 0)
    ]
+  arr: number[]= this.quotes.map(quote=>quote.upvotes)
+  highest = Math.max(...this.arr)
 
+  completeQuote(isComplete, index){
+    if (isComplete) {
+      this.quotes.splice(index,1);
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
