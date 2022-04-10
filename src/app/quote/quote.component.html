@@ -4,27 +4,22 @@
     <div class="row mt-md-5 pt-4">
         <div class="col-md-8">
             <h2>My Quotes</h2>
-        <ul *ngFor ="let quote of quotes;let i =index">
-            <div *ngIf ="quote.upvotes == highest && quote.upvotes>0; then highlight else empty"></div>
-            <app-quote-detail *ngIf='quote.quote' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
+        <div *ngFor ="let quote of quotes;let i =index">
+            <div *ngIf ="highest == quote.upvote && quote.upvote>0; then highlight else empty"></div>
             <ng-template #highlight>
-                <li appHighlight>{{quote.quote}}
-                    <span class="text-primary"> Upvotes : {{quote.upvotes}}</span>
-                    <span class="text-danger"> Downvotes : {{quote.downvotes}}</span></li>
+                <div appHighlight>{{quote.author}}
+                    <button (click)="upvote(i)" id="btn">Upvote : {{quote.upvote}}</button>
+                    <button (click)="downvote(i)" id="btn">Downvote :{{quote.downvote}}</button>
                 </ng-template>
                 <ng-template #empty>
-                    <li>{{quote.quote}}
-                        <span class="text-primary">Upvotes : {{quote.upvotes}}</span>
-                        <span class="text-danger">Downvotes : {{quote.downvotes}}</span></li>
+                    <li>{{quote.author}}
+                        <button (click)="upvote(i)" id="btn">Upvote : {{quote.upvote}}</button>
+                        <button (click)="downvote(i)" id="btn">Downvote :{{quote.downvote}}</button>
+                    </ng-template>
+        </div>
+        <div *ngIf="quote.showQuote">
+            <app-quote-detail *ngIf="quote.showQuote" [quote]="quote" (isComplete) = "deleteQuote($event,i)"></app-quote-detail>
+        </div>
 
-                </ng-template>
-                
-            </ul>
-            <p *ngIf="quotes.length>4">You have too many quotes</p>
-        </div>
-        <div class="col-md-4">
-            <h2>Quotes Form</h2>
-        
-        </div>
-    </div>
-</div>
+
+
