@@ -2,24 +2,38 @@
 <hr>
  <div class="container">
     <div class="row mt-md-5 pt-4">
-        <div class="col-md-8">
+        <div class="col-md-6">
             <h2>My Quotes</h2>
-        <div *ngFor ="let quote of quotes;let i =index">
-            <div *ngIf ="highest == quote.upvote && quote.upvote>0; then highlight else empty"></div>
-            <ng-template #highlight>
-                <div appHighlight>{{quote.author}}
-                    <button (click)="upvote(i)" id="btn">Upvote : {{quote.upvote}}</button>
-                    <button (click)="downvote(i)" id="btn">Downvote :{{quote.downvote}}</button>
+        
+        <div *ngFor ="let quote of quotes; let i =index">
+            <div>
+                <div *ngIf ="highest == quote.upvote && quote.upvote>0; then highlight else empty"></div>
+                <ng-template #highlight>
+                    <h4>{{quote.author}}</h4>
+                    <!-- <button>view more</button> -->
+                    <button (click)="upVote()" id="btn">Upvote: {{quote.upvote}}</button>
+                    <button (click)="downVote()" id="btn">Downvote: {{quote.downvote}}</button>   
                 </ng-template>
+
                 <ng-template #empty>
-                    <li>{{quote.author}}
-                        <button (click)="upvote(i)" id="btn">Upvote : {{quote.upvote}}</button>
-                        <button (click)="downvote(i)" id="btn">Downvote :{{quote.downvote}}</button>
-                    </ng-template>
+                    <h4>{{quote.author}}</h4>
+                    <button (click)="upVote()" id="btn">Upvote: {{quote.upvote}}</button>
+                    <button (click)="downVote()" id="btn">Downvote: {{quote.downvote}}</button>   
+                </ng-template>
+                
+            </div>     
         </div>
-        <div *ngIf="quote.showQuote">
+        <!-- <div *ngIf="quote.showQuote">
             <app-quote-detail *ngIf="quote.showQuote" [quote]="quote" (isComplete) = "deleteQuote($event,i)"></app-quote-detail>
+        </div> -->
+    </div>
+    <p *ngIf='quotes.length > 4'>You have too many quotes</p>
+        <div class="col-md-6">
+            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
+    </div>
+
+
 
 
 
