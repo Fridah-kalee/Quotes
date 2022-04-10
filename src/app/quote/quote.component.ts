@@ -7,13 +7,13 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
 
-   quotes: Quote[]=[
-     new Quote(1, 'fridah', 'fridah', 'Believe you can and you are halfway there', 0, 0, new Date(15,4,2005)),
-     new Quote(2, 'fridah', 'fridah', 'You were born to be real ,not to be perfect', 0, 0, new Date(15,4,2005)),
-     new Quote(3, 'fridah', 'fridah', 'Just do it', 0, 0, new Date(15,4,2005)),
-     new Quote(4, 'fridah', 'fridah', 'Be the light', 0, 0, new Date(15,4,2005)),
-     new Quote(5, 'fridah', 'fridah', 'Start your day with happiness and gratitude', 0, 0, new Date(15,4,2005))
-   ]
+   quotes: Quote[] =[
+     new Quote(1, 'Martin Luther King jr', 'Martin Luther King jr', 'The time is always right to do what is right.', 0, 0, new Date(15,4,2003)),
+     new Quote(2, 'Chinua Achebe', 'Chinua Achebe', 'If you dont like someones story, write your own.', 0, 0, new Date(15,4,1972)),
+     new Quote(3, 'Bill Gates', 'Bill Gates', 'If you are born poor it is not your mistake, but if you die poor it is your mistake.', 0, 0, new Date(15,4,1994)),
+     new Quote(4, 'Arthur C. Clarke ', 'Arthur C. Clarke ', 'Any sufficiently advanced technology is equivalent to magic.', 0, 0, new Date(15,4,1985)),
+     new Quote(5, 'Oprah Winfrey', 'Oprah Winfrey', 'The greatest discovery of all time is that a person can change his future by merely changing his attitude', 0, 0, new Date(15,4,2010)),
+   ];
   arr: number[]= this.quotes.map(quote=>quote.upvote)
   highest = Math.max(...this.arr)
 
@@ -46,7 +46,9 @@ export class QuoteComponent implements OnInit {
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
+    quote.createdDate = new Date(quote.createdDate);
     this.quotes.push(quote)
+    
   }
   constructor() { }
 
