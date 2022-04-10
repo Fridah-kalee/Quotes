@@ -20,11 +20,19 @@ export class QuoteComponent implements OnInit {
   upvotes=0;
   downvotes=0;
 
-  upVote(){
-    this.upvotes=this.upvotes +1;
+  toggleDetails(index){
+    this.quotes[index].showQuote=! this.quotes[index].showQuote
   }
-  downVote(){
-    this.downvotes=this.downvotes +1;
+
+  upVote(index){
+    var up = this.quotes[index].upvote+1;
+    this.quotes[index].upvote=up;
+  }
+  
+  downVote(index){
+    var down = this.quotes[index].downvote+1;
+    this.quotes[index].downvote=down;
+    
   }
   deleteQuote(isComplete, index){
     if(isComplete) {
