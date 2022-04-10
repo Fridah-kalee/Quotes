@@ -1,27 +1,50 @@
-# Quotes
+# QuotesApp
+### By Fridah Kalee
+## This is An Angular Quote App that allows users to add their favorite quotes, View some other posted quotes , vote for their most inspirational quotes and also be able to delete their quotes.
+## Table of Content
+* Description
+* Requirements
+* setup and instruction
+* Technology Used
+* Reference
+* Known Bugs
+* Licence
+* Authors Info
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+## Requirements
 
-## Development server
+* NodeJs and Angular installed or an IDE with the same functionality. VS Code is a great choice.
+* Get the Code(Either clone this repository or fork it on GitHub and clone your fork:
+* git clone https://github.com/Fridah-kalee/Quotes.git
+* cd angular-app
+## Setup and instruction
+Clone the repository https://github.com/Fridah-kalee/Quotes.git
+Extract and open the folder.
+Run ng serve --open from the terminal.
+Navigate to http://localhost:4200/ on your preferred browser.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Technology Used
+* HTML
+* CSS 
+* Angular 
+* Typescript
+* Bootstrap
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Reference
+* Moringa school-Canvas
+* Angular Crash Course
 
-## Build
+## Known Bugs
+* All known bugs were fixed (Bug fixed) . Seen any Bug? Feel free to reach me through Email:fridakalee@gmail.com.
+## Licence
+MIT 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Copyright(c)2022 Fridah kalee
 
-## Running unit tests
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Authors Info
+Slack Profile- Fridah kalee | Linked- Fridah Kalee 
