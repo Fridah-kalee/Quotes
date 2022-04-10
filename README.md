@@ -18,10 +18,10 @@
 * git clone https://github.com/Fridah-kalee/Quotes.git
 * cd angular-app
 ## Setup and instruction
-Clone the repository https://github.com/Fridah-kalee/Quotes.git
-Extract and open the folder.
-Run ng serve --open from the terminal.
-Navigate to http://localhost:4200/ on your preferred browser.
+* Clone the repository https://github.com/Fridah-kalee/Quotes.git
+* Extract and open the folder.
+* Run ng serve --open from the terminal.
+* Navigate to http://localhost:4200/ on your preferred browser.
 
 
 ## Technology Used
