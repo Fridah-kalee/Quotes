@@ -25,13 +25,7 @@
                 <p>Author is required</p>
         </div>
         </div>
-        <div class="form-group">
-            <label for="created">Created on:</label>
-            <input type='date' id="created" [(ngModel)]="newQuote.createdDate" name="createdDate" #createdDate="ngModel" required>
-            <div [hidden]="createdDate.valid || createdDate.pristine" class="alert alert-danger">
-              <p>Date is required</p>
-            </div>
-        </div>
+        
         <button type="submit" id="submit">Add Quotes</button>
     </form>
   </div>

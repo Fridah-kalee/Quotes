@@ -8,11 +8,11 @@ import { Quote } from '../quote'
 export class QuoteComponent implements OnInit {
 
    quotes: Quote[] =[
-     new Quote(1, 'Martin Luther King jr', 'Martin Luther King jr', 'The time is always right to do what is right.', 0, 0, new Date(15,4,2003)),
-     new Quote(2, 'Chinua Achebe', 'Chinua Achebe', 'If you dont like someones story, write your own.', 0, 0, new Date(15,4,1972)),
-     new Quote(3, 'Bill Gates', 'Bill Gates', 'If you are born poor it is not your mistake, but if you die poor it is your mistake.', 0, 0, new Date(15,4,1994)),
-     new Quote(4, 'Arthur C. Clarke ', 'Arthur C. Clarke ', 'Any sufficiently advanced technology is equivalent to magic.', 0, 0, new Date(15,4,1985)),
-     new Quote(5, 'Oprah Winfrey', 'Oprah Winfrey', 'The greatest discovery of all time is that a person can change his future by merely changing his attitude', 0, 0, new Date(15,4,2010)),
+     new Quote(1, 'Martin Luther King jr', 'Martin Luther King jr', 'The time is always right to do what is right',0,0, new Date(15,4,2015)),
+     new Quote(2, 'Chinua Achebe', 'Chinua Achebe', 'If you dont like someones story, write your own',0,0, new Date(15,4,2010)),
+     new Quote(3, 'Bill Gates', 'Bill Gates', 'If you are born poor it is not your mistake, but if you die poor it is your mistake', 0, 0,new Date(15,4,2000)),
+     new Quote(4, 'Arthur C. Clarke ', 'Arthur C. Clarke ', 'Any sufficiently advanced technology is equivalent to magic', 0, 0,new Date(15,4,2009)),
+     new Quote(5, 'Oprah Winfrey', 'Oprah Winfrey', 'The greatest discovery of all time is that a person can change his future by merely changing his attitude', 0, 0,new Date(15,4,2010)),
    ];
   arr: number[]= this.quotes.map(quote=>quote.upvote)
   highest = Math.max(...this.arr)
