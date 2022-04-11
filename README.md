@@ -5,6 +5,7 @@
 * Description
 * Requirements
 * setup and instruction
+* User Requirement
 * Technology Used
 * Reference
 * Known Bugs
@@ -23,7 +24,12 @@
 * Run ng serve --open from the terminal.
 * Navigate to http://localhost:4200/ on your preferred browser.
 
-
+## User Requirement
+* Create and add a new quote.
+* view already posted quotes
+* Upvote or downvote a quote according to how inspirational or terrible it is by clicking a button.
+* See the number of upvotes and number of downvotes for each quote.
+* Delete a quote.
 ## Technology Used
 * HTML
 * CSS 
